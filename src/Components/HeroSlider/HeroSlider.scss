@@ -1,0 +1,56 @@
+.hero {
+  &-body {
+    position: relative;
+  }
+  &-slider {
+    &__img {
+      width: 705px;
+      height: 380px;
+    }
+    &-wrapper {
+      width: 705px;
+      height: 380px;
+      position: absolute;
+      right: 58px;
+      bottom: 0;
+      overflow: hidden;
+      article {
+        position: absolute;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      .activeSlide {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .lastSlide {
+        transform: translateX(-100%);
+      }
+      .nextSlide {
+        transform: translateX(100%);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .hero {
+    width: 100%;
+    &-body {
+      flex-direction: column;
+    }
+
+    &-slider {
+      &__img {
+        width: 360px;
+        height: 194px;
+      }
+      &-wrapper {
+        width: 360px;
+        height: 194px;
+        right: -20px;
+        top: 210px;
+        overflow: hidden;
+      }
+    }
+  }
+}

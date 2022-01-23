@@ -1,0 +1,36 @@
+.address-info-slider {
+  width: 370px;
+  height: 360px;
+  overflow: hidden;
+}
+.address-info__wrapper {
+  display: block;
+  width: 100%;
+  position: relative;
+
+  article {
+    position: absolute;
+    opacity: 0;
+    transition: 0.7s;
+  }
+  .activeSlide-adres {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .lastSlide-adres {
+    transform: translateX(-100%);
+  }
+  .nextSlide-adres {
+    transform: translateX(100%);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .address-info__wrapper {
+    display: block;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    position: absolute;
+    top: 253px;
+  }
+}

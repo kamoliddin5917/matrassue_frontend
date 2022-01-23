@@ -1,0 +1,94 @@
+.zmodal__wr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  .zmodal__btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    right: 100px;
+  }
+}
+.zmodal_mainimg {
+  z-index: 4;
+}
+
+.zmodal__list {
+  margin-top: 100px;
+  display: flex;
+  width: 775px;
+  justify-content: space-between;
+
+  button {
+    cursor: pointer;
+    background: none;
+    width: 128px;
+    height: 128px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    &:hover {
+      border: 4px solid #01384d;
+    }
+  }
+  .zmodal__btn-act {
+    border: 4px solid #01384d;
+  }
+}
+
+.zmodal_btn-img {
+  width: 120px;
+  height: 120px;
+}
+@media only screen and (max-width: 600px) {
+  .zmodal_mainimg {
+    width: 286px;
+    height: 131px;
+    margin-left: 245px;
+    margin-top: 150px;
+  }
+
+  .bnt-img {
+    width: 44px;
+    height: 44px;
+  }
+  .zmodal__list {
+    button {
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(0, 0, 0, 0);
+      &:hover {
+        border: 1px solid #01384d;
+      }
+    }
+    .zmodal__btn-act {
+      border: 1px solid #01384d;
+    }
+  }
+  .zmodal__change-btn {
+    width: 44px;
+    height: 44px;
+  }
+  .zmodal_btn-img {
+    height: 44px;
+    width: 44px;
+  }
+  .zmodal__wr {
+    .zmodal__btn {
+      right: 20px;
+    }
+  }
+  .zmodal__btnimg {
+    width: 13px;
+    height: 13px;
+  }
+}

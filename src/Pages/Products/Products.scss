@@ -1,0 +1,53 @@
+.product_modal {
+  width: 1090px;
+  small {
+    position: absolute;
+    bottom: 115px;
+    font-size: 10px;
+  }
+}
+
+.product_select {
+  width: 220px;
+  padding: 13px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.products_inputs_wrapper {
+  input:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tick_wrapper {
+  position: relative;
+  p {
+    margin: 0;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  input:checked ~ .tick {
+    background: url("../../images/tick.svg") no-repeat;
+  }
+}
+
+.tick {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: calc(-30px - 7px);
+  right: 7px;
+  cursor: pointer;
+  background: url("../../images/close.svg") no-repeat;
+}
+
+.product_section {
+  margin-top: 30px;
+  &:nth-child(3) {
+    margin-bottom: 20px;
+  }
+}

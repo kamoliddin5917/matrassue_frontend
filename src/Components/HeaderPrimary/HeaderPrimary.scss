@@ -1,0 +1,145 @@
+.header {
+  .nav-list {
+    padding-top: 20px;
+    display: flex;
+    width: 445px;
+    margin-left: auto;
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+    &__link {
+      font-size: 12px;
+      line-height: 12px;
+      color: #01384d;
+    }
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  .header-bottom {
+    margin-top: 3px;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    .header-list {
+      display: flex;
+      margin-left: auto;
+      align-items: center;
+      &__item:first-child {
+        position: relative;
+        margin-right: 40px;
+        &::before {
+          content: url("../../images/Call.svg");
+          display: flex;
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          top: 0;
+          left: -25px;
+          @media only screen and (max-width: 600px) {
+            display: none;
+          }
+        }
+      }
+      &__link {
+        font-size: 18px;
+        line-height: 18px;
+        color: #01384d;
+        @media only screen and (max-width: 600px) {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .btn {
+          display: none;
+        }
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      margin-top: 0;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
+}
+
+.burger_modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #eabf9f;
+  &__logo {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
+}
+
+.nav-list_mobile {
+  margin-left: 30px;
+  display: flex;
+  width: 320px;
+  margin: 63px auto;
+  flex-direction: column;
+  &__item {
+    padding-bottom: 30px;
+    &:last-child {
+      width: 100vw;
+      height: 77px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      padding-bottom: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+    }
+  }
+  &__link {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: #01384d;
+  }
+  &__btn {
+    margin-top: 15px;
+  }
+}
+
+.call__link {
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: 13px;
+  }
+  color: #01384d;
+}

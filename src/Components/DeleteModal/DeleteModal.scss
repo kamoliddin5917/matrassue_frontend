@@ -1,0 +1,53 @@
+.delete_modal_wrapper {
+  width: 330px;
+  height: 120px;
+  padding: 25px 24px;
+  position: fixed;
+  background-color: #fff;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.5);
+  animation: delete-btn;
+  animation-duration: 0.5s;
+  h3 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0;
+  }
+}
+
+@keyframes delete-btn {
+  0% {
+    right: -350px;
+  }
+  100% {
+    right: 20px;
+  }
+}
+
+.delete_btn_wrapper {
+  margin-top: 22px;
+  display: flex;
+  justify-content: flex-end;
+  button {
+    border: none;
+    padding: 9px 30px;
+    border-radius: 5px;
+    background: rgba($color: #d61f1f, $alpha: 0.1);
+    color: #d61f1f;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+    &:nth-child(1) {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}

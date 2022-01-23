@@ -1,0 +1,361 @@
+.order-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  .modal-content {
+    z-index: 1;
+    max-width: 440px;
+    width: 100%;
+    padding: 40px;
+    height: 676px;
+    background-color: #f6fbff;
+    border: 1px solid #c7dff5;
+    color: #01384d;
+    position: relative;
+
+    .xbtn {
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      cursor: pointer;
+    }
+
+    .response-box {
+      h3 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 30px;
+        text-align: center;
+        line-height: 40px;
+        margin: 40px 0;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 43px;
+      }
+
+      .ok-btn {
+        width: 360px;
+        height: 60px;
+        background-color: #01384d;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+
+    .order-box {
+      .form-text {
+        font-size: 40px;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 45px;
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        input {
+          width: 360px;
+          height: 60px;
+          margin-bottom: 25px;
+          padding: 22px 20px;
+          border: 2px solid #01384d;
+          border-radius: 5px;
+
+          &::placeholder {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 16px;
+          }
+        }
+
+        .number-input {
+          padding-left: 104px;
+          margin-bottom: 45px;
+        }
+
+        &::before {
+          content: "+998";
+          width: 84px;
+          height: 60px;
+          color: white;
+          background-color: #01384d;
+          position: absolute;
+          top: 85px;
+          left: 0;
+          border-radius: 5px 0 0 5px;
+          padding: 23px;
+        }
+
+        .productName-text {
+          text-align: left;
+        }
+
+        select {
+          width: 360px;
+          height: 60px;
+          margin-bottom: 25px;
+          margin-top: 15px;
+          padding: 20px 20px;
+          border: 2px solid #01384d;
+          border-radius: 5px;
+
+          -webkit-appearance: none;
+          appearance: none;
+          background: url("../../images/arrow.png") no-repeat 327px center;
+          background-color: white;
+        }
+
+        .count-box {
+          width: 360px;
+          position: relative;
+          margin-top: 15px;
+          margin-bottom: 50px;
+
+          .amount {
+            border: 2px solid #01384d;
+            border-radius: 5px;
+            padding: 22px 104px;
+            text-align: center;
+            font-family: "Josefin Sans", sans-serif;
+            color: #01384d;
+            font-size: 24px;
+            line-height: 12px;
+            background-color: white;
+          }
+
+          .btns {
+            width: 84px;
+            height: 60px;
+            border: 2px solid #01384d;
+            background-color: white;
+            color: #01384d;
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+          }
+
+          .minus-btn {
+            border-radius: 5px 0 0 5px;
+            top: 0;
+            left: 0;
+          }
+
+          .plus-btn {
+            border-radius: 0 5px 5px 0;
+            top: 0;
+            right: 0;
+          }
+        }
+        .submit-btn {
+          width: 360px;
+          height: 60px;
+          background-color: #01384d;
+          color: white;
+          border-radius: 5px;
+          border: none;
+          font-family: "Josefin Sans", sans-serif;
+          font-size: 18px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .error-modal {
+      width: 330px;
+      height: 120px;
+      padding: 25px 24px;
+      position: fixed;
+      background-color: #fff;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+      box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.5);
+      animation: delete-btn;
+      animation-duration: 0.5s;
+
+      .err-txt {
+        font-size: 24px;
+      }
+    }
+
+    @keyframes delete-btn {
+      0% {
+        right: -350px;
+      }
+      100% {
+        right: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .order-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+
+    .modal-content {
+      z-index: 1;
+      max-width: 320px;
+      width: 100%;
+      padding: 20px;
+      height: 567px;
+
+      .xbtn {
+        top: 15px;
+        right: 15px;
+      }  
+
+      .response-box {
+        h3 {
+          font-size: 23px;
+          line-height: 32px;
+          margin: 55px 0 28px;
+        }
+
+        img {
+          width: 250px;
+          margin-bottom: 30px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-bottom: 24px;
+          text-align: center;
+          line-height: 22px;
+        }
+
+        .ok-btn {
+          width: 280px;
+          height: 50px;
+          font-size: 14px;
+        }
+      }
+
+      .order-box {
+
+        .form-text {
+          font-size: 24px;
+          margin-bottom: 35px;
+          margin-top: 15px;
+        }
+
+        form {
+  
+          input {
+            width: 280px;
+            height: 50px;
+            margin-bottom: 20px;
+            padding: 18px 20px;
+  
+            &::placeholder {
+              font-family: "Josefin Sans", sans-serif;
+              font-size: 14px;
+            }
+          }
+
+          .number-input {
+            padding-left: 90px;
+            margin-bottom: 40px;
+          }
+  
+          &::before {
+            width: 70px;
+            height: 50px;
+            top: 70px;
+            left: 0;
+            padding: 18px;
+          }
+
+          select {
+            width: 280px;
+            height: 50px;
+            margin-bottom: 20px;
+            padding: 15px 20px;
+  
+            -webkit-appearance: none;
+            appearance: none;
+            background: url("../../images/arrow.png") no-repeat 245px center;
+            background-color: white;
+          }
+
+          .count-box {
+            width: 280px;
+            margin-top: 10px;
+            margin-bottom: 60px;
+
+            .amount {
+              padding: 17px 60px;
+              font-size: 20px;
+              line-height: 12px;
+            }
+  
+            .btns {
+              width: 60px;
+              height: 50px;
+              font-size: 20px;
+            }
+          }
+
+          .submit-btn {
+            width: 280px;
+            height: 50px;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .error-modal {
+        width: 200px;
+        height: 60px;
+        padding: 12px 16px;
+        top: 20px;
+        right: 20px;
+  
+        .err-txt {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+  
+      @keyframes delete-btn {
+        0% {
+          right: -220px;
+        }
+        100% {
+          right: 20px;
+        }
+      }
+    }
+
+  }
+}

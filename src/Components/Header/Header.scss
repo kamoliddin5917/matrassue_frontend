@@ -1,0 +1,54 @@
+header {
+  width: calc(100vw - 220px);
+  height: 76px;
+  background: #01384d;
+  display: flex;
+  align-items: center;
+  padding: 0 60px 0 15px;
+  position: fixed;
+  right: 0;
+  z-index: 4;
+}
+
+.search_input {
+  width: 400px;
+  padding: 12px 20px;
+  border-radius: 7px;
+  outline: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  background-image: url("../../images/search.svg");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 20px);
+  background-position-y: center;
+  font-size: 13px;
+  line-height: 16px;
+  border: none;
+  &::placeholder {
+    color: rgba($color: #000000, $alpha: 0.5);
+  }
+}
+
+.user_wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  div {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+  h3 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+  }
+}
